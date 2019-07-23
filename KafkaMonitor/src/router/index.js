@@ -60,7 +60,7 @@ export default new Router({
 					path:'/msgMonitor/delayCharts',
 					meta:{title:'同步时效(图表)',icon:'el-icon-tickets'},
 					component:()=>import('@/views/msgMonitor/delayCharts/index')
-				}
+				},
 			]
 	  },
 
@@ -73,6 +73,31 @@ export default new Router({
           path:'/consumerMonitor/consumer',
           meta:{title:'消费信息监控',icon:'el-icon-tickets'},
           component:()=>import('@/views/consumerMonitor/consumer/index')
+        },
+        {
+          path:'/consumerMonitor/javaApp',
+          meta:{title:'对接java应用数',icon:'el-icon-tickets'},
+          component:()=>import('@/views/consumerMonitor/javaApp/index')
+        },
+        {
+          path:'/consumerMonitor/sparkApp',
+          meta:{title:'对接spark应用数',icon:'el-icon-tickets'},
+          component:()=>import('@/views/consumerMonitor/sparkApp/index')
+        },
+        {
+          path:'/consumerMonitor/consumerBacklog',
+          meta:{title:'消费积压',icon:'el-icon-tickets'},
+          component:()=>import('@/views/consumerMonitor/consumerBacklog/index')
+        },
+        {
+          path:'/consumerMonitor/consumerErr',
+          meta:{title:'消费异常',icon:'el-icon-tickets'},
+          component:()=>import('@/views/consumerMonitor/consumerErr/index')
+        },
+        {
+          path:'/consumerMonitor/infoNum',
+          meta:{title:'消息量',icon:'el-icon-tickets'},
+          component:()=>import('@/views/consumerMonitor/infoNum/index')
         }
       ]
     },
@@ -152,6 +177,11 @@ export default new Router({
           path:'/monitorSet/kafkaOffsetData',
           meta:{title:'消费 预警阈值',icon:'el-icon-tickets'},
           component:()=>import('@/views/monitorSet/consumerWarnIndex/index')
+        },
+        {
+          path:'/monitorSet/firewall',
+          meta:{title:'防火墙管理',icon:'el-icon-tickets'},
+          component:()=>import('@/views/monitorSet/firewall/index')
         }
       ]
     }

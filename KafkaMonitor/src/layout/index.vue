@@ -1,30 +1,33 @@
 <template>
   <el-container class='layout'>
-    <el-aside width="220px"><leftMenu></leftMenu></el-aside>
-    <el-main>
-      <div class="main-header">这里是头部信息</div>
-      <router-view></router-view>
-    </el-main>
+    <el-header>这里是头部信息</el-header>
+    <el-container>
+      <el-aside width="220px"><leftMenu></leftMenu></el-aside>
+      <el-main>
+        <router-view></router-view>
+      </el-main>
+    </el-container>
   </el-container>
 </template>
 
 <script>
 import leftMenu from '@/components/leftMenu'
 export default{
-  components:{leftMenu},
-  created() {
-  	console.log(this.$router.options.routes)
-  }
+  components:{leftMenu}
 }
 </script>
 
 <style scoped>
-.el-container{
+.layout.el-container{
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   width: 100%;
+}
+.el-header{
+  color: #ffffff;
+  background: #304156;
 }
 .el-aside{
   height: 100%;
@@ -44,8 +47,8 @@ export default{
 }
 </style>
 <style>
-  .layout .el-submenu__title,.layout .el-menu-item{
-    font-size: 0.833125rem !important;
+  .layout .el-submenu__title,.layout .el-menu-item,.el-table{
+    font-size: 0.8125rem !important;
   }
   ul.el-menu--inline{
     text-align: left;

@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" style="font-size: 0.8125rem;">
     <router-view/>
   </div>
 </template>
@@ -17,7 +17,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  font-size: 0.833125rem;
 }
 body{
   margin: 0;

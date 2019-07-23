@@ -38,10 +38,10 @@ export default{
 	},
 	methods:{
 		handleOpen(){
-      console.log('打开了菜单')
+      //console.log('打开了菜单')
     },
 		handleClose(){
-      console.log('关闭了菜单')
+      //console.log('关闭了菜单')
     }
 	}
 }
